@@ -79,7 +79,7 @@ export default function CommunitySection() {
               GitHub
             </Button>
             </a>
-            <a href="https://discord.gg/9yBXckgn" target="_blank" rel="noopener noreferrer">
+            <a href="https://discord.gg/K64U65je7h" target="_blank" rel="noopener noreferrer">
               <Button
                 className="bg-[#5865F2] hover:bg-[#4752c4] flex items-center gap-2"
                 size="lg"

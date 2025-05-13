@@ -141,7 +141,7 @@ export default function RoadmapSection() {
             </a>{" "}
             or join our{" "}
             <a
-              href="https://discord.gg/9yBXckgn"
+              href="https://discord.gg/K64U65je7h"
               target="_blank"
               rel="noopener noreferrer"
               className="text-purple-400 hover:text-purple-300 underline"

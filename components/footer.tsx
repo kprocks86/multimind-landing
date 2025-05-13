@@ -8,11 +8,12 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-1">
             <Link href="/" className="text-xl font-bold text-white flex items-center">
+            <img src="/logos/brand_logo.png" alt="MultiMind Logo" className="w-10 h-10 mr-2" />
               <span className="bg-gradient-to-r from-purple-500 to-cyan-500 text-transparent bg-clip-text">
                 MultiMind
               </span>
             </Link>
-            <p className="mt-2 text-gray-400">Built by MultiMind Labs</p>
+            <p className="mt-2 text-gray-400">Built by Ai2Innovate</p>
             <p className="mt-4 text-gray-400">The unified interface for all major language models.</p>
             <div className="flex items-center gap-4 mt-6">
               <Link
@@ -24,7 +25,7 @@ export default function Footer() {
                 <Github size={20} />
               </Link>
               <Link
-                href="https://discord.gg/9yBXckgn"
+                href="https://discord.gg/K64U65je7h"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white transition-colors"
@@ -86,7 +87,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="https://discord.gg/9yBXckgn"
+                  href="https://discord.gg/K64U65je7h"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-400 hover:text-white transition-colors flex items-center gap-1"
@@ -96,7 +97,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="https://x.com/multimindsdk" className="text-gray-400 hover:text-white transition-colors">
+                <Link href="https://x.com/Ai2Innovate" className="text-gray-400 hover:text-white transition-colors">
                   Twitter
                 </Link>
               </li>
@@ -132,12 +133,12 @@ export default function Footer() {
 
         <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-500 text-sm">
-            © {new Date().getFullYear()} MultiMind Labs. Released under the MIT License.
+            © {new Date().getFullYear()} Ai2Innovate. Released under the MIT License.
           </p>
           <div className="flex items-center gap-2 mt-4 md:mt-0 text-gray-500 text-sm">
             <span>Made with</span>
             <Heart size={14} className="text-red-500" fill="currentColor" />
-            <span>by the MultiMind Team</span>
+            <span>by Ai2Innovate team</span>
           </div>
         </div>
       </div>
