@@ -16,14 +16,19 @@ import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { CheckCircle2 } from "lucide-react"
+import { useForm } from '@formspree/react';
 
 interface ContactModalProps {
   open: boolean
   onOpenChange: (open: boolean) => void
 }
 
+const FORM_KEY = process.env.NEXT_PUBLIC_FORM_KEY || '';
+
 export default function ContactModal({ open, onOpenChange }: ContactModalProps) {
+
   const [isSubmitted, setIsSubmitted] = useState(false)
+  const [state, handleSubmitForm] = useForm(FORM_KEY);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -64,13 +69,12 @@ export default function ContactModal({ open, onOpenChange }: ContactModalProps) 
     if (validateForm()) {
       // In a real app, you would send this data to your backend
       console.log(formData)
+      handleSubmitForm(formData);
       setIsSubmitted(true)
-
       // Reset form after 3 seconds and close modal
       setTimeout(() => {
-        setIsSubmitted(false)
-        setFormData({ name: "", email: "", role: "" })
         onOpenChange(false)
+        setIsSubmitted(false)
       }, 3000)
     }
   }
