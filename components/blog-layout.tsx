@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Head from "next/head";
 import { CalendarIcon, Clock, ArrowLeft } from "lucide-react";
 import { formatDate } from "@/lib/utils";
 import Navbar from "@/components/navbar";
@@ -26,29 +25,11 @@ interface BlogLayoutProps {
   };
 }
 
-const host = "https://www.multimind.com/blogs/";
+const host = "https://www.multimind.dev/blogs/";
 
 export default function BlogLayout({ children, post }: BlogLayoutProps) {
   return (
     <div className="min-h-screen bg-[#050A14]">
-      <Head>
-        <title>{post.title} | MultiMind Blog</title>
-        <meta name="description" content={post.meta?.description || post.title} />
-        <meta name="keywords" content={post.meta?.keywords?.join(", ") || post.category} />
-
-        {/* Open Graph / Facebook */}
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content={`${host}${post.id}`} />
-        <meta property="og:title" content={post.title} />
-        <meta property="og:description" content={post.meta?.description || post.title} />
-        {post.coverImage && <meta property="og:image" content={post.coverImage} />}
-
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={post.title} />
-        <meta name="twitter:description" content={post.meta?.description || post.title} />
-        {post.coverImage && <meta name="twitter:image" content={post.coverImage} />}
-      </Head>
       <Navbar />
       <div className="container mx-auto py-8 px-4">
         <Link
@@ -112,8 +93,9 @@ export default function BlogLayout({ children, post }: BlogLayoutProps) {
                        prose-code:bg-gray-900 prose-code:p-0.5 prose-code:rounded prose-code:text-gray-300
                        prose-pre:bg-gray-900 prose-pre:border prose-pre:border-gray-800 prose-pre:text-gray-300
                        prose-table:border-collapse prose-table:border prose-table:border-gray-800
-                       prose-th:bg-gray-900 prose-th:p-2 prose-th:border prose-th:border-gray-800
-                       prose-td:p-2 prose-td:border prose-td:border-gray-800"
+                       prose-th:bg-gray-900 prose-th:p-2 prose-th:border prose-th:border-gray-800 prose-th:text-white
+                       prose-td:p-2 prose-td:border prose-td:border-gray-800 prose-td:text-gray-300
+                       prose-tr:hover:bg-gray-800/50"
             dangerouslySetInnerHTML={{ __html: post.content }}
           />
 

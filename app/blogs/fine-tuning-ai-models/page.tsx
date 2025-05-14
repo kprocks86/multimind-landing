@@ -1,15 +1,10 @@
-import Link from "next/link"
-import Image from "next/image"
-import { CalendarIcon, Clock, ArrowLeft } from "lucide-react"
-import { formatDate } from "@/lib/utils"
 import BlogLayout from "@/components/blog-layout"
+import { Metadata } from "next"
 
-
-export default function BlogPostPage() {
-  const post = {
-    id: "fine-tuning-ai-models",
-    title: "Fine-Tuning AI Models: A Practical Beginner's Guide Using Multimind SDK",
-    content: `
+const post = {
+  id: "fine-tuning-ai-models",
+  title: "Fine-Tuning AI Models: A Practical Beginner's Guide Using Multimind SDK",
+  content: `
       <p>Learn how to customize AI models for your specific needs without a PhD in machine learning - perfect for developers and enthusiasts getting started with AI.</p>
 
       <h2>What is Fine-Tuning and Why Should You Care?</h2>
@@ -185,20 +180,26 @@ const fineTuningJob = await MultimindSDK.fineTune({
 
       <p><em>Have questions about fine-tuning or want to share your experiences? Leave a comment below or join our community discussions on GitHub!</em></p>
     `,
-    coverImage: "/blog/fine-tuning-guide.jpg",
-    date: "2023-11-25",
-    author: {
-      name: "Daniel Park",
-      avatar: "/avatars/daniel.jpg",
-    },
-    readingTime: "9 min read",
-    category: "Tutorials",
-    meta: {
-      keywords: ["AI Models", "Fine-Tuning", "Multimind SDK", "Beginner's Guide"],
-      description: "A practical guide for beginners on fine-tuning AI models using Multimind SDK."
-    }
+  coverImage: "/blog/fine-tuning-guide.jpg",
+  date: "2023-11-25",
+  author: {
+    name: "Daniel Park",
+    avatar: "/avatars/daniel.jpg",
+  },
+  readingTime: "9 min read",
+  category: "Tutorials",
+  meta: {
+    keywords: ["AI Models", "Fine-Tuning", "Multimind SDK", "Beginner's Guide"],
+    description: "A practical guide for beginners on fine-tuning AI models using Multimind SDK."
   }
+}
 
+export const metadata: Metadata = {
+  title: post.title,
+  description: post.meta.description,
+  keywords: post.meta.keywords
+}
+export default function BlogPostPage() {
   return (
     <BlogLayout post={post}>{null}</BlogLayout>
   )

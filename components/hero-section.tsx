@@ -143,7 +143,7 @@ export default function HeroSection() {
                 <div className="w-3 h-3 rounded-full bg-green-500"></div>
                 <div className="ml-2 text-sm text-gray-400">multimind_demo.py</div>
               </div>
-              <div className="bg-gray-950 rounded-md p-4 font-mono text-sm md:text-base overflow-hidden">
+              <div className="bg-gray-950 rounded-md p-4 font-mono text-sm md:text-base overflow-hidden h-[400px]">
                 <div className="text-gray-400"># Import the MultiMind SDK</div>
                 <div>
                   <span className="text-cyan-400">from</span>

@@ -1,14 +1,11 @@
-import Link from "next/link"
-import Image from "next/image"
-import { CalendarIcon, Clock, ArrowLeft } from "lucide-react"
-import { formatDate } from "@/lib/utils"
-import BlogLayout from "@/components/blog-layout"
 
-export default function BlogPostPage() {
-  const post = {
-    id: "ai-project-roadmap",
-    title: "AI Project Roadmap: How to Build Your First AI Application Using Multimind SDK",
-    content: `
+import BlogLayout from "@/components/blog-layout"
+import { Metadata } from "next"
+
+const post = {
+  id: "ai-project-roadmap",
+  title: "AI Project Roadmap: How to Build Your First AI Application Using Multimind SDK",
+  content: `
       <p>From idea to deployment: A step-by-step guide for beginners to create their first AI application without getting overwhelmed.</p>
 
       <h2>The Problem: AI Projects Are Overwhelming for Beginners</h2>
@@ -206,20 +203,27 @@ const researchAssistant = new Agent({
 
       <p><em>Have questions about your AI development journey? Leave a comment below, or join our community on GitHub to connect with other beginners and experienced developers alike!</em></p>
     `,
-    coverImage: "/blog/ai-project-roadmap.jpg",
-    date: "2023-12-10",
-    author: {
-      name: "Jennifer Wu",
-      avatar: "/avatars/jennifer.jpg",
-    },
-    readingTime: "11 min read",
-    category: "Beginners",
-    meta: {
-      keywords: ["AI Project", "Multimind SDK", "AI Application", "Beginners Guide"],
-      description: "A comprehensive roadmap for beginners to build their first AI application using Multimind SDK."
-    }
+  coverImage: "/blog/ai-project-roadmap.jpg",
+  date: "2023-12-10",
+  author: {
+    name: "Jennifer Wu",
+    avatar: "/avatars/jennifer.jpg",
+  },
+  readingTime: "11 min read",
+  category: "Beginners",
+  meta: {
+    keywords: ["AI Project", "Multimind SDK", "AI Application", "Beginners Guide"],
+    description: "A comprehensive roadmap for beginners to build their first AI application using Multimind SDK."
   }
+}
 
+export const metadata: Metadata = {
+  title: post.title,
+  description: post.meta.description,
+  keywords: post.meta.keywords
+}
+
+export default function BlogPostPage() {
   return (
     <BlogLayout post={post}>{null}</BlogLayout>
   )

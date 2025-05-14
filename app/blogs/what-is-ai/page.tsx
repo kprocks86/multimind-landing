@@ -2,13 +2,13 @@ import Link from "next/link"
 import Image from "next/image"
 import { CalendarIcon, Clock, ArrowLeft } from "lucide-react"
 import { formatDate } from "@/lib/utils"
-import BlogLayout from "../../../components/blog-layout"
+import BlogLayout from "@/components/blog-layout"
+import { Metadata } from "next"
 
-export default function BlogPostPage() {
-  const post = {
-    id: "what-is-ai",
-    title: "What is AI? A Practical Explanation Without the Buzzwords",
-    content: `
+const post = {
+  id: "what-is-ai",
+  title: "What is AI? A Practical Explanation Without the Buzzwords",
+  content: `
       <p>Confused by all the AI terminology? This straightforward guide explains what artificial intelligence actually is and how you can start using it for practical projects today.</p>
 
       <h2>AI Explained Simply: Beyond the Hype</h2>
@@ -212,19 +212,28 @@ const knowledgeAssistant = new Agent({
 
       <p><em>What questions do you have about AI? Leave a comment below, and we'll help demystify this technology for you!</em></p>
     `,
-    coverImage: "/blog/what-is-ai.jpg",
-    date: "2023-12-15",
-    author: {
-      name: "Robert Chen",
-      avatar: "/avatars/robert.jpg",
-    },
-    readingTime: "10 min read",
-    category: "Beginners",
-    meta: {
-      keywords: ["AI", "Artificial Intelligence", "Beginners Guide", "Practical AI"],
-      description: "A practical explanation of AI without the buzzwords, perfect for beginners looking to understand and use AI in projects."
-    }
+  coverImage: "/blog/what-is-ai.jpg",
+  date: "2023-12-15",
+  author: {
+    name: "Robert Chen",
+    avatar: "/avatars/robert.jpg",
+  },
+  readingTime: "10 min read",
+  category: "Beginners",
+  meta: {
+    keywords: ["AI", "Artificial Intelligence", "Beginners Guide", "Practical AI"],
+    description: "A practical explanation of AI without the buzzwords, perfect for beginners looking to understand and use AI in projects."
   }
+}
 
-  return <BlogLayout post={post}>{null}</BlogLayout>
+export const metadata: Metadata = {
+  title: post.title,
+  description: post.meta.description,
+  keywords: post.meta.keywords
+}
+
+export default function BlogPostPage() {
+  return (
+    <BlogLayout post={post}>{null}</BlogLayout>
+  )
 }
