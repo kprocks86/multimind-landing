@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from "react"
 import { Button } from "@/components/ui/button"
-import { Github, ArrowRight } from "lucide-react"
+import { Github, ArrowRight, Star } from "lucide-react"
 import { motion } from "framer-motion"
 import ContactModal from "./contact-modal"
 import Link from "next/link"
@@ -98,8 +98,8 @@ export default function HeroSection() {
                   className="bg-white text-gray-900 hover:bg-gray-200 flex items-center gap-2 text-base py-6 px-6"
                   size="lg"
                 >
-                  <Github size={20} />
-                  Try on GitHub
+                  <Star size={20} />
+                  Star on GitHub
                 </Button>
               </Link>
               {/* <Button

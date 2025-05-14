@@ -3,7 +3,7 @@
 import { useState } from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { Github, Menu, X } from "lucide-react"
+import { Github, Menu, X, Star } from "lucide-react"
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -33,6 +33,9 @@ export default function Navbar() {
           </Link>
           <Link href="#community" className="text-gray-300 hover:text-white transition-colors">
             Community
+          </Link>
+          <Link href="/blogs" className="text-gray-300 hover:text-white transition-colors">
+            Blog
           </Link>
           <Link href="https://github.com/multimindlabs/multimind-sdk" target="_blank" rel="noopener noreferrer">
             <Button variant="outline" className="flex items-center gap-2 text-gray-900 border-gray-700">
@@ -78,12 +81,19 @@ export default function Navbar() {
             >
               Roadmap
             </Link>
-            <Link
+            {/* <Link
               href="#community"
               className="text-gray-300 hover:text-white transition-colors py-2"
               onClick={() => setIsMenuOpen(false)}
             >
               Community
+            </Link> */}
+            <Link
+              href="/blog"
+              className="text-gray-300 hover:text-white transition-colors py-2"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Blog
             </Link>
             <div className="flex flex-col space-y-3 pt-2">
               <Link href="https://github.com" target="_blank" rel="noopener noreferrer">

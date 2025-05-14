@@ -8,6 +8,8 @@ import RoadmapSection from "@/components/roadmap-section"
 import CommunitySection from "@/components/community-section"
 import Footer from "@/components/footer"
 import ModelSwitchAnimation from "@/components/model-switch-animation"
+import { BlogSection } from "@/components/blog-section"
+import { FloatingStarWidget } from "@/components/floating-star-widget"
 
 export default function Home() {
   return (
@@ -29,6 +31,7 @@ export default function Home() {
             <ModelSwitchAnimation />
           </div>
         </div>
+        <BlogSection />
         <CodeSnippets />
         <ModelLogos />
         <BuiltForSection />
@@ -36,6 +39,7 @@ export default function Home() {
         <CommunitySection />
       </main>
       <Footer />
+      <FloatingStarWidget />
     </div>
   )
 }
