@@ -43,9 +43,6 @@ export default function Navbar() {
               <span>GitHub</span>
             </Button>
           </Link>
-          <Button className="bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700">
-            Get Started
-          </Button>
         </div>
 
         {/* Mobile Menu Button */}

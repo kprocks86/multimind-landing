@@ -1,5 +1,4 @@
 import Link from "next/link"
-import Image from "next/image"
 import { CalendarIcon, Clock } from "lucide-react"
 import { formatDate } from "@/lib/utils"
 
@@ -15,6 +14,10 @@ type BlogPost = {
   }
   readingTime: string
   category: string
+  meta?: {
+    keywords: string[]
+    description: string
+  }
 }
 
 export const blogPosts: BlogPost[] = [
@@ -31,6 +34,10 @@ export const blogPosts: BlogPost[] = [
     },
     readingTime: "10 min read",
     category: "Beginners",
+    meta: {
+      keywords: ["AI", "Artificial Intelligence", "Beginners Guide", "Practical AI"],
+      description: "A practical explanation of AI without the buzzwords, perfect for beginners looking to understand and use AI in projects."
+    }
   },
   {
     id: "ai-project-roadmap",
@@ -45,20 +52,10 @@ export const blogPosts: BlogPost[] = [
     },
     readingTime: "11 min read",
     category: "Beginners",
-  },
-  {
-    id: "multimind-roadmap-2024",
-    title: "MultiMind SDK Roadmap for 2024: What's Coming Next",
-    excerpt:
-      "Explore our exciting plans for MultiMind SDK in 2024, including new features, integrations, and community initiatives.",
-    coverImage: "/blog/roadmap-2024.jpg",
-    date: "2023-12-01",
-    author: {
-      name: "Thomas Lee",
-      avatar: "/avatars/thomas.jpg",
-    },
-    readingTime: "7 min read",
-    category: "Announcements",
+    meta: {
+      keywords: ["AI Project", "Multimind SDK", "AI Application", "Beginners Guide"],
+      description: "A comprehensive roadmap for beginners to build their first AI application using Multimind SDK."
+    }
   },
   {
     id: "fine-tuning-ai-models",
@@ -73,6 +70,10 @@ export const blogPosts: BlogPost[] = [
     },
     readingTime: "9 min read",
     category: "Tutorials",
+    meta: {
+      keywords: ["AI Models", "Fine-Tuning", "Multimind SDK", "Beginner's Guide"],
+      description: "A practical guide for beginners on fine-tuning AI models using Multimind SDK."
+    }
   },
   {
     id: "ai-agents-beginners-guide",
@@ -87,6 +88,10 @@ export const blogPosts: BlogPost[] = [
     },
     readingTime: "8 min read",
     category: "Beginners",
+    meta: {
+      keywords: ["AI Agents", "Multimind SDK", "Beginners Guide", "No Code"],
+      description: "A simple guide for beginners to understand and build AI agents using Multimind SDK without coding."
+    }
   },
   {
     id: "building-next-generation-ai-agents",
@@ -102,6 +107,10 @@ export const blogPosts: BlogPost[] = [
     },
     readingTime: "10 min read",
     category: "Enterprise",
+    meta: {
+      keywords: ["AI Agents", "Enterprise Applications", "Multimind SDK", "No Code"],
+      description: "Explore how Multimind SDK is revolutionizing enterprise applications with next-generation AI agents."
+    }
   },
   {
     id: "multimind-ecommerce-applications",
@@ -116,6 +125,10 @@ export const blogPosts: BlogPost[] = [
     },
     readingTime: "15 min read",
     category: "Enterprise",
+    meta: {
+      keywords: ["E-Commerce", "AI Agents", "Multimind SDK", "Enterprise"],
+      description: "Learn how to use Multimind SDK for building AI agents to enhance e-commerce platforms."
+    }
   },
 ]
 

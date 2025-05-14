@@ -1,33 +1,60 @@
-import Link from "next/link"
-import Image from "next/image"
-import { CalendarIcon, Clock, ArrowLeft } from "lucide-react"
-import { formatDate } from "@/lib/utils"
-import Navbar from "@/components/navbar"
-import Footer from "@/components/footer"
+import Link from "next/link";
+import Head from "next/head";
+import { CalendarIcon, Clock, ArrowLeft } from "lucide-react";
+import { formatDate } from "@/lib/utils";
+import Navbar from "@/components/navbar";
+import Footer from "@/components/footer";
 
 interface BlogLayoutProps {
-  children: React.ReactNode
+  children: React.ReactNode;
   post: {
-    id: string
-    title: string
-    content: string
-    coverImage: string
-    date: string
+    id: string;
+    title: string;
+    content: string;
+    coverImage: string;
+    date: string;
     author: {
-      name: string
-      avatar: string
-    }
-    readingTime: string
-    category: string
-  }
+      name: string;
+      avatar: string;
+    };
+    readingTime: string;
+    category: string;
+    meta?: {
+      keywords: string[];
+      description: string;
+    };
+  };
 }
+
+const host = "https://www.multimind.com/blogs/";
 
 export default function BlogLayout({ children, post }: BlogLayoutProps) {
   return (
     <div className="min-h-screen bg-[#050A14]">
+      <Head>
+        <title>{post.title} | MultiMind Blog</title>
+        <meta name="description" content={post.meta?.description || post.title} />
+        <meta name="keywords" content={post.meta?.keywords?.join(", ") || post.category} />
+
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content={`${host}${post.id}`} />
+        <meta property="og:title" content={post.title} />
+        <meta property="og:description" content={post.meta?.description || post.title} />
+        {post.coverImage && <meta property="og:image" content={post.coverImage} />}
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={post.title} />
+        <meta name="twitter:description" content={post.meta?.description || post.title} />
+        {post.coverImage && <meta name="twitter:image" content={post.coverImage} />}
+      </Head>
       <Navbar />
       <div className="container mx-auto py-8 px-4">
-        <Link href="/blogs" className="inline-flex items-center text-purple-400 hover:text-purple-300 mb-8">
+        <Link
+          href="/blogs"
+          className="inline-flex items-center text-purple-400 hover:text-purple-300 mb-8"
+        >
           <ArrowLeft className="mr-2 h-4 w-4" />
           Back to Home
         </Link>
@@ -37,7 +64,9 @@ export default function BlogLayout({ children, post }: BlogLayoutProps) {
             <div className="inline-block bg-purple-600 text-white text-sm font-medium px-3 py-1 rounded mb-4">
               {post.category}
             </div>
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">{post.title}</h1>
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
+              {post.title}
+            </h1>
             <div className="flex flex-wrap items-center gap-6 text-gray-300 mb-8">
               <div className="flex items-center gap-2">
                 {/* <div className="relative h-10 w-10 rounded-full overflow-hidden">
@@ -89,9 +118,18 @@ export default function BlogLayout({ children, post }: BlogLayoutProps) {
           />
 
           <div className="mt-12 pt-8 border-t border-gray-800">
-            <h3 className="text-xl font-bold text-white mb-4">Share this post</h3>
+            <h3 className="text-xl font-bold text-white mb-4">
+              Share this post
+            </h3>
             <div className="flex gap-4">
-              <button className="p-2 bg-gray-800 rounded-full hover:bg-gray-700 transition-colors">
+              <a
+                href={`https://www.facebook.com/sharer/sharer.php?u=${
+                  host + post.id
+                }`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2 bg-gray-800 rounded-full hover:bg-gray-700 transition-colors"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -106,8 +144,13 @@ export default function BlogLayout({ children, post }: BlogLayoutProps) {
                 >
                   <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
                 </svg>
-              </button>
-              <button className="p-2 bg-gray-800 rounded-full hover:bg-gray-700 transition-colors">
+              </a>
+              <a
+                href={`https://twitter.com/intent/tweet?url=${host + post.id}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2 bg-gray-800 rounded-full hover:bg-gray-700 transition-colors"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -122,30 +165,12 @@ export default function BlogLayout({ children, post }: BlogLayoutProps) {
                 >
                   <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
                 </svg>
-              </button>
-              <button className="p-2 bg-gray-800 rounded-full hover:bg-gray-700 transition-colors">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="h-5 w-5 text-white"
-                >
-                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
-                  <rect width="4" height="12" x="2" y="9" />
-                  <circle cx="4" cy="4" r="2" />
-                </svg>
-              </button>
+              </a>
             </div>
           </div>
         </article>
       </div>
       <Footer />
     </div>
-  )
+  );
 }

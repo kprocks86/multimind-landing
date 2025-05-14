@@ -1,3 +1,7 @@
+import Link from "next/link"
+import Image from "next/image"
+import { CalendarIcon, Clock, ArrowLeft } from "lucide-react"
+import { formatDate } from "@/lib/utils"
 import BlogLayout from "@/components/blog-layout"
 
 export default function BlogPostPage() {
@@ -165,10 +169,13 @@ const shoppingAssistant = new Agent({
     },
     readingTime: "10 min read",
     category: "Enterprise",
+    meta: {
+      keywords: ["AI Agents", "Enterprise Applications", "Multimind SDK", "No Code"],
+      description: "Explore how Multimind SDK is revolutionizing enterprise applications with next-generation AI agents."
+    }
   }
 
   return (
     <BlogLayout post={post}>{null}</BlogLayout>
-
   )
 }

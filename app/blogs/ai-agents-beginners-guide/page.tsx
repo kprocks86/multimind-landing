@@ -154,6 +154,10 @@ const researchAgent = new Agent({
     },
     readingTime: "8 min read",
     category: "Beginners",
+    meta: {
+      keywords: ["AI Agents", "Multimind SDK", "Beginners Guide", "No Code"],
+      description: "A simple guide for beginners to understand and build AI agents using Multimind SDK without coding."
+    }
   }
 
   return (

@@ -1,3 +1,7 @@
+import Link from "next/link"
+import Image from "next/image"
+import { CalendarIcon, Clock, ArrowLeft } from "lucide-react"
+import { formatDate } from "@/lib/utils"
 import BlogLayout from "@/components/blog-layout"
 
 export default function BlogPostPage() {
@@ -289,6 +293,10 @@ journeyAgent.addSkill('track_journey', async (context) => {
     },
     readingTime: "15 min read",
     category: "Enterprise",
+    meta: {
+      keywords: ["E-Commerce", "AI Agents", "Multimind SDK", "Enterprise"],
+      description: "Learn how to use Multimind SDK for building AI agents to enhance e-commerce platforms."
+    }
   }
 
   return <BlogLayout post={post}>{null}</BlogLayout>

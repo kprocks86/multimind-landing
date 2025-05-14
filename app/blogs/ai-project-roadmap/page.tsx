@@ -214,6 +214,10 @@ const researchAssistant = new Agent({
     },
     readingTime: "11 min read",
     category: "Beginners",
+    meta: {
+      keywords: ["AI Project", "Multimind SDK", "AI Application", "Beginners Guide"],
+      description: "A comprehensive roadmap for beginners to build their first AI application using Multimind SDK."
+    }
   }
 
   return (

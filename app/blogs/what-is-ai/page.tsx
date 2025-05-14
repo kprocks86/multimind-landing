@@ -220,6 +220,10 @@ const knowledgeAssistant = new Agent({
     },
     readingTime: "10 min read",
     category: "Beginners",
+    meta: {
+      keywords: ["AI", "Artificial Intelligence", "Beginners Guide", "Practical AI"],
+      description: "A practical explanation of AI without the buzzwords, perfect for beginners looking to understand and use AI in projects."
+    }
   }
 
   return <BlogLayout post={post}>{null}</BlogLayout>

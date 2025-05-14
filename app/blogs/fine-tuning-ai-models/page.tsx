@@ -1,3 +1,7 @@
+import Link from "next/link"
+import Image from "next/image"
+import { CalendarIcon, Clock, ArrowLeft } from "lucide-react"
+import { formatDate } from "@/lib/utils"
 import BlogLayout from "@/components/blog-layout"
 
 
@@ -189,6 +193,10 @@ const fineTuningJob = await MultimindSDK.fineTune({
     },
     readingTime: "9 min read",
     category: "Tutorials",
+    meta: {
+      keywords: ["AI Models", "Fine-Tuning", "Multimind SDK", "Beginner's Guide"],
+      description: "A practical guide for beginners on fine-tuning AI models using Multimind SDK."
+    }
   }
 
   return (
