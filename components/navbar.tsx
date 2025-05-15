@@ -22,16 +22,16 @@ export default function Navbar() {
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-6">
-          <Link href="#features" className="text-gray-300 hover:text-white transition-colors">
+          <Link href="/#features" className="text-gray-300 hover:text-white transition-colors">
             Features
           </Link>
-          <Link href="#code" className="text-gray-300 hover:text-white transition-colors">
+          <Link href="/#code" className="text-gray-300 hover:text-white transition-colors">
             Code
           </Link>
-          <Link href="#roadmap" className="text-gray-300 hover:text-white transition-colors">
+          <Link href="/#roadmap" className="text-gray-300 hover:text-white transition-colors">
             Roadmap
           </Link>
-          <Link href="#community" className="text-gray-300 hover:text-white transition-colors">
+          <Link href="/#community" className="text-gray-300 hover:text-white transition-colors">
             Community
           </Link>
           <Link href="/blogs" className="text-gray-300 hover:text-white transition-colors">
@@ -58,33 +58,33 @@ export default function Navbar() {
         <div className="md:hidden bg-gray-900 border-b border-gray-800">
           <div className="container mx-auto px-4 py-3 flex flex-col space-y-4">
             <Link
-              href="#features"
+              href="/#features"
               className="text-gray-300 hover:text-white transition-colors py-2"
               onClick={() => setIsMenuOpen(false)}
             >
               Features
             </Link>
             <Link
-              href="#code"
+              href="/#code"
               className="text-gray-300 hover:text-white transition-colors py-2"
               onClick={() => setIsMenuOpen(false)}
             >
               Code
             </Link>
             <Link
-              href="#roadmap"
+              href="/#roadmap"
               className="text-gray-300 hover:text-white transition-colors py-2"
               onClick={() => setIsMenuOpen(false)}
             >
               Roadmap
             </Link>
-            {/* <Link
-              href="#community"
+            <Link
+              href="/#community"
               className="text-gray-300 hover:text-white transition-colors py-2"
               onClick={() => setIsMenuOpen(false)}
             >
               Community
-            </Link> */}
+            </Link>
             <Link
               href="/blogs"
               className="text-gray-300 hover:text-white transition-colors py-2"
@@ -93,15 +93,15 @@ export default function Navbar() {
               Blog
             </Link>
             <div className="flex flex-col space-y-3 pt-2">
-              <Link href="https://github.com" target="_blank" rel="noopener noreferrer">
-                <Button variant="outline" className="w-full flex items-center justify-center gap-2 border-gray-700">
-                  <Github size={18} />
-                  <span>GitHub</span>
-                </Button>
-              </Link>
-              <Button className="w-full bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700">
+            <Link href="https://github.com/multimindlabs/multimind-sdk" target="_blank" rel="noopener noreferrer">
+            <Button variant="outline" className="flex items-center gap-2 text-gray-900 border-gray-700">
+              <Github size={18} />
+              <span>GitHub</span>
+            </Button>
+          </Link>
+              {/* <Button className="w-full bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700">
                 Get Started
-              </Button>
+              </Button> */}
             </div>
           </div>
         </div>
