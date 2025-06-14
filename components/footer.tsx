@@ -17,7 +17,7 @@ export default function Footer() {
             <p className="mt-4 text-gray-400">The unified interface for all major language models.</p>
             <div className="flex items-center gap-4 mt-6">
               <Link
-                href="https://github.com/multimindlabs"
+                href="https://github.com/multimindlab"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white transition-colors"
@@ -47,13 +47,13 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4">Resources</h3>
             <ul className="space-y-3">
               <li>
-                <Link href="https://github.com/multimindlabs/multimind-sdk/tree/develop/docs" className="text-gray-400 hover:text-white transition-colors flex items-center gap-1">
+                <Link href="https://github.com/multimindlab/multimind-sdk/tree/develop/docs" className="text-gray-400 hover:text-white transition-colors flex items-center gap-1">
                   Documentation
                 </Link>
               </li>
 
               <li>
-                <Link href="https://github.com/multimindlabs/multimind-sdk/tree/develop/examples" className="text-gray-400 hover:text-white transition-colors flex items-center gap-1">
+                <Link href="https://github.com/multimindlab/multimind-sdk/tree/develop/examples" className="text-gray-400 hover:text-white transition-colors flex items-center gap-1">
                   Examples
                 </Link>
               </li>
@@ -76,7 +76,7 @@ export default function Footer() {
             <ul className="space-y-3">
               <li>
                 <Link
-                  href="https://github.com/multimindlabs"
+                  href="https://github.com/multimindlab"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-400 hover:text-white transition-colors flex items-center gap-1"
@@ -113,7 +113,7 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4">Legal</h3>
             <ul className="space-y-3">
               <li>
-                <Link href="https://github.com/multimindlabs/multimind-sdk?tab=Apache-2.0-1-ov-file" className="text-gray-400 hover:text-white transition-colors">
+                <Link href="https://github.com/multimindlab/multimind-sdk?tab=Apache-2.0-1-ov-file" className="text-gray-400 hover:text-white transition-colors">
                   License
                 </Link>
               </li>

@@ -85,7 +85,7 @@ const post = {
         <li>Tool integration that allows interaction with other software and services</li>
       </ol>
 
-      <p><strong>Real-world example</strong>: A customer service agent built with <a href="https://github.com/multimindlabs/multimind-sdk">Multimind SDK</a> that remembers your previous issues, plans a troubleshooting approach, and can access order databases to provide specific help.</p>
+      <p><strong>Real-world example</strong>: A customer service agent built with <a href="https://github.com/multimindlab/multimind-sdk">Multimind SDK</a> that remembers your previous issues, plans a troubleshooting approach, and can access order databases to provide specific help.</p>
 
       <h2>AI Myths vs. Reality</h2>
 
@@ -204,7 +204,7 @@ const knowledgeAssistant = new Agent({
         <li>Augment human capabilities</li>
       </ul>
 
-      <p>The key to benefiting from AI is understanding its practical applications and limitations. With tools like <a href="https://github.com/multimindlabs/multimind-sdk">Multimind SDK</a>, you can start building and using AI applications today—no PhD required.</p>
+      <p>The key to benefiting from AI is understanding its practical applications and limitations. With tools like <a href="https://github.com/multimindlab/multimind-sdk">Multimind SDK</a>, you can start building and using AI applications today—no PhD required.</p>
 
       <p>Whether you're just curious about what AI can do or ready to build your own applications, the barrier to entry has never been lower. The question isn't whether you can use AI, but what problems you'll solve with it.</p>
 

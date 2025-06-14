@@ -78,7 +78,7 @@ const post = {
       <ol>
         <li>Create a free account at <a href="https://multimind.dev">multimind.dev</a></li>
         <li>Explore the template gallery for inspiration</li>
-        <li>Fork the <a href="https://github.com/multimindlabs/multimind-sdk">GitHub repository</a> to follow along with examples</li>
+        <li>Fork the <a href="https://github.com/multimindlab/multimind-sdk">GitHub repository</a> to follow along with examples</li>
       </ol>
 
       <p>No complex installations or GPU configurations required!</p>
@@ -167,7 +167,7 @@ const researchAssistant = new Agent({
       <p><strong>Solution</strong>: Focus on narrow capabilities first. An agent that does one thing well is better than one that does many things poorly.</p>
 
       <h3>"I'm stuck on a technical problem"</h3>
-      <p><strong>Solution</strong>: The <a href="https://github.com/multimindlabs/multimind-sdk/discussions">Multimind community</a> is full of helpful members. Describe your issue clearly, and you'll likely get assistance.</p>
+      <p><strong>Solution</strong>: The <a href="https://github.com/multimindlab/multimind-sdk/discussions">Multimind community</a> is full of helpful members. Describe your issue clearly, and you'll likely get assistance.</p>
 
       <h3>"My project feels too simple compared to ChatGPT"</h3>
       <p><strong>Solution</strong>: Remember that even ChatGPT started simple. Focus on creating unique value through specialization and personalization.</p>
@@ -194,7 +194,7 @@ const researchAssistant = new Agent({
         <li>Build for your own needs first</li>
         <li>Iterate based on real usage</li>
         <li>Learn just enough technical details as you need them</li>
-        <li>Use tools like <a href="https://github.com/multimindlabs/multimind-sdk">Multimind SDK</a> that handle complexity for you</li>
+        <li>Use tools like <a href="https://github.com/multimindlab/multimind-sdk">Multimind SDK</a> that handle complexity for you</li>
       </ul>
 
       <p>Your journey to becoming an AI builder starts with a single step. What problem will you solve first?</p>

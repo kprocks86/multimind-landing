@@ -132,7 +132,7 @@ export default function RoadmapSection() {
           <p className="text-gray-400">
             Want to contribute? Check our{" "}
             <a
-              href="https://github.com/multimindlabs/multimind-sdk/blob/develop/CONTRIBUTING.md"
+              href="https://github.com/multimindlab/multimind-sdk/blob/develop/CONTRIBUTING.md"
               target="_blank"
               rel="noopener noreferrer"
               className="text-purple-400 hover:text-purple-300 underline"

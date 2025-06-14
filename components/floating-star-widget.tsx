@@ -20,7 +20,7 @@ export function FloatingStarWidget() {
 
   return (
     <div className="fixed bottom-4 right-4 z-50 animate-fade-in">
-      <Link href="https://github.com/multimindlabs/multimind-sdk">
+      <Link href="https://github.com/multimindlab/multimind-sdk">
         <Button className="bg-gray-900 hover:bg-gray-800 text-white shadow-lg flex items-center gap-2 px-4 py-2 rounded-full">
           <Star className="h-4 w-4 text-yellow-400" />
           <span>Star MultiMind SDK</span>

@@ -93,7 +93,7 @@ export default function HeroSection() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="https://github.com/multimindlabs/multimind-sdk" target="_blank" rel="noopener noreferrer">
+              <Link href="https://github.com/multimindlab/multimind-sdk" target="_blank" rel="noopener noreferrer">
                 <Button
                   className="bg-white text-gray-900 hover:bg-gray-200 flex items-center gap-2 text-base py-6 px-6"
                   size="lg"

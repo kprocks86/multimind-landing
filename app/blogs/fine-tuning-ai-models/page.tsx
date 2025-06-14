@@ -161,7 +161,7 @@ const fineTuningJob = await MultimindSDK.fineTune({
 
       <p>The teams and organizations that master fine-tuning will have a significant competitive advantage - their AI will be more helpful, more aligned with their specific needs, and more effective at solving their unique problems.</p>
 
-      <p>With tools like <a href="https://github.com/multimindlabs/multimind-sdk">Multimind SDK</a> making fine-tuning accessible to everyone, you don't need to be a machine learning expert to take advantage of this powerful technique.</p>
+      <p>With tools like <a href="https://github.com/multimindlab/multimind-sdk">Multimind SDK</a> making fine-tuning accessible to everyone, you don't need to be a machine learning expert to take advantage of this powerful technique.</p>
 
       <h2>Getting Started Today</h2>
 
@@ -169,7 +169,7 @@ const fineTuningJob = await MultimindSDK.fineTune({
 
       <ol>
         <li>Visit <a href="https://multimind.dev">multimind.dev</a> to explore the platform</li>
-        <li>Check out the <a href="https://github.com/multimindlabs/multimind-sdk">GitHub repository</a> for documentation</li>
+        <li>Check out the <a href="https://github.com/multimindlab/multimind-sdk">GitHub repository</a> for documentation</li>
         <li>Join the community to connect with other fine-tuning enthusiasts</li>
         <li>Try the guided fine-tuning tutorial to create your first specialized model</li>
       </ol>

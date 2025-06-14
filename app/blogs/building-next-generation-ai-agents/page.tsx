@@ -130,7 +130,7 @@ const shoppingAssistant = new Agent({
     <p>The open-source nature of Multimind SDK means you can begin exploring its capabilities immediately:</p>
 
     <ol>
-      <li><strong>Explore the <a href="https://github.com/multimindlabs/multimind-sdk">GitHub repository</a></strong> to understand its capabilities</li>
+      <li><strong>Explore the <a href="https://github.com/multimindlab/multimind-sdk">GitHub repository</a></strong> to understand its capabilities</li>
       <li><strong>Try the interactive demos</strong> at <a href="https://multimind.dev">multimind.dev</a></li>
       <li><strong>Deploy a sample agent</strong> using the pre-built templates</li>
       <li><strong>Join the community</strong> of innovative businesses building with Multimind</li>
@@ -155,7 +155,7 @@ const shoppingAssistant = new Agent({
 
     <hr>
 
-    <p><em>Ready to build your first advanced AI agent? Visit <a href="https://multimind.dev">multimind.dev</a> or check out our <a href="https://github.com/multimindlabs/multimind-sdk">GitHub repository</a> to get started today.</em></p>
+    <p><em>Ready to build your first advanced AI agent? Visit <a href="https://multimind.dev">multimind.dev</a> or check out our <a href="https://github.com/multimindlab/multimind-sdk">GitHub repository</a> to get started today.</em></p>
   `,
   coverImage: "/blog/ai-agents-enterprise.jpg",
   date: "2023-11-05",

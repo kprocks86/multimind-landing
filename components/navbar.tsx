@@ -37,7 +37,7 @@ export default function Navbar() {
           <Link href="/blogs" className="text-gray-300 hover:text-white transition-colors">
             Blog
           </Link>
-          <Link href="https://github.com/multimindlabs/multimind-sdk" target="_blank" rel="noopener noreferrer">
+          <Link href="https://github.com/multimindlab/multimind-sdk" target="_blank" rel="noopener noreferrer">
             <Button variant="outline" className="flex items-center gap-2 text-gray-900 border-gray-700">
               <Github size={18} />
               <span>GitHub</span>
@@ -93,7 +93,7 @@ export default function Navbar() {
               Blog
             </Link>
             <div className="flex flex-col space-y-3 pt-2">
-            <Link href="https://github.com/multimindlabs/multimind-sdk" target="_blank" rel="noopener noreferrer">
+            <Link href="https://github.com/multimindlab/multimind-sdk" target="_blank" rel="noopener noreferrer">
             <Button variant="outline" className="flex items-center gap-2 text-gray-900 border-gray-700">
               <Github size={18} />
               <span>GitHub</span>

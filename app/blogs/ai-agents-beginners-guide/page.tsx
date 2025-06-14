@@ -62,7 +62,7 @@ const post = {
 
     <h2>Build Your First AI Agent Without Writing Code</h2>
 
-    <p>The <a href="https://github.com/multimindlabs/multimind-sdk">Multimind SDK</a> is an open-source framework that makes it easy to build sophisticated AI agents without coding experience.</p>
+    <p>The <a href="https://github.com/multimindlab/multimind-sdk">Multimind SDK</a> is an open-source framework that makes it easy to build sophisticated AI agents without coding experience.</p>
 
     <p>Here's how you can create your first agent using Multimind's no-code interface:</p>
 
@@ -126,7 +126,7 @@ reasoning: new ReasoningSystem({
 
     <ol>
       <li>Visit <a href="https://multimind.dev">multimind.dev</a> to explore capabilities and demos</li>
-      <li>Check out the <a href="https://github.com/multimindlabs/multimind-sdk">GitHub repository</a> for documentation</li>
+      <li>Check out the <a href="https://github.com/multimindlab/multimind-sdk">GitHub repository</a> for documentation</li>
       <li>Join the community Discord to connect with other agent builders</li>
       <li>Try the interactive tutorial to build your first agent in under 30 minutes</li>
     </ol>
@@ -141,7 +141,7 @@ reasoning: new ReasoningSystem({
 
     <hr>
 
-    <p><em>Are you building interesting AI agents? We'd love to hear about your projects! Share your ideas or questions in the comments below, or reach out to us on <a href="https://github.com/multimindlabs/multimind-sdk">GitHub</a>.</em></p>
+    <p><em>Are you building interesting AI agents? We'd love to hear about your projects! Share your ideas or questions in the comments below, or reach out to us on <a href="https://github.com/multimindlab/multimind-sdk">GitHub</a>.</em></p>
   `,
   coverImage: "/blog/ai-agents-beginners.jpg",
   date: "2023-11-15",
