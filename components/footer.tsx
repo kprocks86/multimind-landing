@@ -97,7 +97,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="https://x.com/Ai2Innovate" className="text-gray-400 hover:text-white transition-colors">
+                <Link href="https://x.com/multimindsdk" className="text-gray-400 hover:text-white transition-colors">
                   Twitter
                 </Link>
               </li>
