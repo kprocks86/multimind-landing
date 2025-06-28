@@ -9,6 +9,3 @@ Sitemap: https://multimind.dev/sitemap.xml
 Disallow: /api/
 Disallow: /_next/
 Disallow: /static/
-
-# Crawl-delay for all bots
-Crawl-delay: 10
