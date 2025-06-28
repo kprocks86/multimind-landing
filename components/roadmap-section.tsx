@@ -66,7 +66,7 @@ export default function RoadmapSection() {
               Roadmap Preview
             </span>
           </h2>
-          <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-6">Our vision for the future of MultiMind</p>
+          <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-6">Our vision for the future of MultiMindSDK</p>
           <div className="flex justify-center">
             <Button
               variant="outline"
