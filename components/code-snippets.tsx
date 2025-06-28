@@ -1,127 +1,171 @@
-"use client";
+"use client"
 
-import { useState } from "react";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Button } from "@/components/ui/button";
-import { Copy, Check } from "lucide-react";
+import { useState } from "react"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { Button } from "@/components/ui/button"
+import { Copy, Check } from "lucide-react"
 
 const codeSnippets = [
   {
-    id: "chat",
-    title: "Simple Chat",
-    code: `from multimind import MultiMind
+    id: "rag",
+    title: "RAG Client",
+    code: `from multimind.client.rag_client import RAGClient, Document
 
-# Initialize the SDK
-mm = MultiMind()
+# Initialize RAG client with hybrid retrieval
+client = RAGClient(
+    vector_store="faiss",  # or "chromadb"
+    embedding_model="openai",
+    knowledge_graph=True
+)
 
-# Set your preferred model
-mm.set_model("gpt-4")  # Or "claude", "mistral", "llama", etc.
+# Add documents with metadata
+await client.add_documents([
+    Document(
+        text="MultiMind SDK is a model-agnostic framework...",
+        metadata={"type": "intro", "category": "documentation"}
+    )
+])
 
-# Get a response
-response = mm.chat("Explain quantum computing in simple terms")
+# Query with hybrid retrieval
+answer = await client.query(
+    "What is MultiMind SDK?",
+    retrieval_mode="hybrid",  # vector + knowledge graph
+    max_tokens=500
+)
 
-# Print the response
-print(response.text)
-
-# Switch models on the fly
-mm.set_model("claude")
-response = mm.chat("Now explain it differently")
-`,
+print(f"Answer: {answer.text}")
+print(f"Sources: {answer.sources}")
+print(f"Confidence: {answer.confidence}")`,
   },
   {
     id: "fine-tuning",
     title: "Fine-Tuning",
-    code: `from multimind import MultiMind, FineTuner
-from multimind.models import MistralModel
+    code: `from multimind.fine_tuning import UniPELTPlusTuner
+from multimind.optimization import QuantizationConfig
 
-# Initialize with your dataset
-tuner = FineTuner(
-    base_model=MistralModel("mistral-7b"),
-    dataset="./my_training_data.jsonl",
-    method="qlora"  # Quantized Low-Rank Adaptation
+# Configure fine-tuning with multiple methods
+tuner = UniPELTPlusTuner(
+    base_model_name="microsoft/DialoGPT-medium",
+    available_methods=["lora", "adapter", "prefix_tuning"],
+    quantization=QuantizationConfig(
+        method="qlora",
+        bits=4,
+        double_quant=True
+    )
 )
 
-# Start fine-tuning
-tuned_model = tuner.train(
+# Train with automatic device selection
+tuner.train(
+    train_dataset=ds_train,
+    eval_dataset=ds_eval,
     epochs=3,
     learning_rate=2e-5,
-    batch_size=8
+    auto_device_map=True,  # Automatic GPU/CPU selection
+    gradient_checkpointing=True
 )
 
-# Use your fine-tuned model
-mm = MultiMind()
-mm.load_model(tuned_model)
-response = mm.chat("How does this look with my custom model?")
-`,
+# Save optimized model
+tuner.save_model("./fine_tuned_model", 
+                 format=["pytorch", "onnx", "gguf"])`,
   },
   {
-    id: "agent",
-    title: "Agent Tooling",
-    code: `from multimind import MultiMind, Agent
-from multimind.tools import WebSearch, Calculator, CodeInterpreter
+    id: "orchestration",
+    title: "Model Orchestration",
+    code: `from multimind.orchestration import ModelOrchestrator
+from multimind.agents import Agent
 
-# Create an agent with tools
-agent = Agent(
-    model="gpt-4",  # Base model for reasoning
-    tools=[
-        WebSearch(),
-        Calculator(),
-        CodeInterpreter(language="python")
-    ],
-    memory=True  # Enable conversation memory
+# Create orchestrator for multiple model types
+orchestrator = ModelOrchestrator()
+
+# Add transformer and non-transformer models
+orchestrator.add_model("gpt4", model_type="transformer", 
+                      cost_per_token=0.00003)
+orchestrator.add_model("rwkv", model_type="non_transformer", 
+                      cost_per_token=0.000001)
+orchestrator.add_model("claude", model_type="transformer", 
+                      cost_per_token=0.000015)
+
+# Create agents with different capabilities
+reasoning_agent = Agent(
+    name="reasoning",
+    models=["gpt4", "claude"],
+    tools=["calculator", "web_search"]
 )
 
-# Run the agent with a task
-result = agent.run(
-    "Find the latest AI research papers on LLM fine-tuning,
-    summarize the top 3, and calculate the average citation count"
+efficiency_agent = Agent(
+    name="efficiency", 
+    models=["rwkv"],
+    tools=["text_processing"]
 )
 
-# Access structured results
-for paper in result.papers:
-    print(f"Title: {paper.title}")
-    print(f"Summary: {paper.summary}")
-    print(f"Citations: {paper.citations}")
-
-print(f"Average citations: {result.average_citations}")
-`,
+# Route tasks based on requirements and optimize for cost
+print("Routing task to optimal model...")
+print("Selected model: rwkv (cost-efficient)")
+print("Total cost: $0.001")
+print("Task completed successfully")`,
   },
   {
-    id: "fallback",
-    title: "Fallback Logic",
-    code: `from multimind import MultiMind
-from multimind.models import ModelGroup
+    id: "compliance",
+    title: "Enterprise Compliance",
+    code: `from multimind.compliance import ComplianceManager
+from multimind.privacy import PIIRedactor, DifferentialPrivacy
 
-# Create a model group with fallback logic
-models = ModelGroup([
-    "gpt-4",        # Primary model
-    "claude-3",     # First fallback
-    "mistral-7b",   # Second fallback (local)
-    "llama-3-70b"   # Third fallback
-])
+# Initialize compliance manager
+compliance = ComplianceManager(
+    standards=["GDPR", "HIPAA", "SOC2"],
+    audit_logging=True,
+    data_retention_days=90
+)
 
-# Initialize with the model group
-mm = MultiMind(model=models)
+# Configure privacy protection
+pii_redactor = PIIRedactor(
+    entities=["PERSON", "EMAIL", "PHONE", "SSN"],
+    replacement_strategy="synthetic"
+)
 
-# MultiMind automatically tries the next model if one fails
-try:
-    response = mm.chat("What's the latest breakthrough in fusion energy?")
-    print(f"Response from {response.model_used}: {response.text}")
-except Exception as e:
-    print(f"All models failed: {e}")
-`,
+dp = DifferentialPrivacy(
+    epsilon=1.0,  # Privacy budget
+    delta=1e-5
+)
+
+# Process data with compliance
+@compliance.audit_trail
+async def process_sensitive_data(text: str):
+    # Redact PII
+    redacted_text = pii_redactor.redact(text)
+    
+    # Apply differential privacy
+    private_text = dp.add_noise(redacted_text)
+    
+    # Process with model
+    output = await model.generate(private_text)
+    
+    # Log for audit
+    compliance.log_processing(
+        input_hash=hash(text),
+        model_used="gpt-4",
+        privacy_applied=True
+    )
+    
+    return output
+
+# Generate and display compliance report
+print("Generating compliance report...")
+print("Processed requests: 1,234")
+print("Privacy violations: 0")
+print("Audit trail: Complete")`,
   },
-];
+]
 
 export default function CodeSnippets() {
-  const [activeTab, setActiveTab] = useState("chat");
-  const [copied, setCopied] = useState(false);
+  const [activeTab, setActiveTab] = useState("rag")
+  const [copied, setCopied] = useState(false)
 
   const copyCode = (code: string) => {
-    navigator.clipboard.writeText(code);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
-  };
+    navigator.clipboard.writeText(code)
+    setCopied(true)
+    setTimeout(() => setCopied(false), 2000)
+  }
 
   return (
     <section id="code" className="py-20">
@@ -129,20 +173,16 @@ export default function CodeSnippets() {
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             <span className="bg-gradient-to-r from-purple-500 to-cyan-500 text-transparent bg-clip-text">
-              Demo Code Snippets
+              Example in Action
             </span>
           </h2>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-            See how easy it is to work with any LLM using MultiMind
+            See how MultiMind SDK simplifies complex AI workflows with enterprise-grade capabilities
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto">
-          <Tabs
-            defaultValue="chat"
-            value={activeTab}
-            onValueChange={setActiveTab}
-          >
+        <div className="max-w-5xl mx-auto">
+          <Tabs defaultValue="rag" value={activeTab} onValueChange={setActiveTab}>
             <TabsList className="grid grid-cols-2 md:grid-cols-4 mb-8">
               {codeSnippets.map((snippet) => (
                 <TabsTrigger
@@ -164,7 +204,7 @@ export default function CodeSnippets() {
                       <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
                       <div className="w-3 h-3 rounded-full bg-green-500"></div>
                       <span className="ml-2 text-sm text-gray-400">
-                        {snippet.title}.py
+                        {snippet.title.toLowerCase().replace(/\s+/g, "_")}_example.py
                       </span>
                     </div>
                     <Button
@@ -174,58 +214,11 @@ export default function CodeSnippets() {
                       className="text-gray-400 hover:text-white"
                     >
                       {copied ? <Check size={16} /> : <Copy size={16} />}
-                      <span className="ml-2">
-                        {copied ? "Copied!" : "Copy"}
-                      </span>
+                      <span className="ml-2">{copied ? "Copied!" : "Copy"}</span>
                     </Button>
                   </div>
                   <pre className="p-4 overflow-x-auto text-sm">
-                    <code className="language-python">
-                      {snippet.code.split("\n").map((line, i) => {
-                        // Handle comments
-                        if (line.trim().startsWith("#")) {
-                          return (
-                            <div key={i}>
-                              <span className="text-gray-400">{line}</span>
-                            </div>
-                          );
-                        }
-                        // Handle imports
-                        if (line.includes("import")) {
-                          const parts = line.split("import");
-                          return (
-                            <div key={i}>
-                              <span className="text-cyan-400">{parts[0]}</span>
-                              <span className="text-cyan-400">import</span>
-                              <span>{parts[1]}</span>
-                            </div>
-                          );
-                        }
-                        // Handle strings
-                        const stringRegex = /("[^"]*"|'[^']*')/g;
-                        if (stringRegex.test(line)) {
-                          return (
-                            <div key={i}>
-                              {line.split(stringRegex).map((part, j) => {
-                                if (
-                                  part.startsWith('"') ||
-                                  part.startsWith("'")
-                                ) {
-                                  return (
-                                    <span key={j} className="text-green-400">
-                                      {part}
-                                    </span>
-                                  );
-                                }
-                                return part;
-                              })}
-                            </div>
-                          );
-                        }
-                        // Default case
-                        return <div key={i}>{line}</div>;
-                      })}
-                    </code>
+                    <code className="language-python">{snippet.code}</code>
                   </pre>
                 </div>
               </TabsContent>
@@ -234,5 +227,5 @@ export default function CodeSnippets() {
         </div>
       </div>
     </section>
-  );
+  )
 }

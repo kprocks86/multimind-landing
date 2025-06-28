@@ -99,43 +99,9 @@ const config = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
-      typography: {
-        DEFAULT: {
-          css: {
-            maxWidth: 'none',
-            color: 'inherit',
-            a: {
-              color: 'inherit',
-              textDecoration: 'none',
-              fontWeight: '500',
-            },
-            strong: {
-              color: 'inherit',
-            },
-            code: {
-              color: 'inherit',
-            },
-            h1: {
-              color: 'inherit',
-            },
-            h2: {
-              color: 'inherit',
-            },
-            h3: {
-              color: 'inherit',
-            },
-            h4: {
-              color: 'inherit',
-            },
-          },
-        },
-      },
     },
   },
-  plugins: [
-    require("tailwindcss-animate"),
-    require("@tailwindcss/typography"),
-  ],
+  plugins: [require("tailwindcss-animate")],
 } satisfies Config
 
 export default config

@@ -35,7 +35,7 @@ export default function ModelLogos() {
   return (
     <section className="py-16 bg-gradient-to-b from-gray-950 to-gray-900">
       <div className="container mx-auto px-4">
-        <h3 className="text-center text-xl text-gray-500 mb-10">Supported Models and Providers</h3>
+        <h3 className="text-center text-xl text-gray-500 mb-10">Works with 30+ Models and Providers</h3>
         <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12 lg:gap-16">
           {logos.map((logo, index) => (
             <div
@@ -49,7 +49,7 @@ export default function ModelLogos() {
         </div>
         <div className="text-center mt-10">
           <p className="text-gray-400">
-            <span className="text-purple-400 font-semibold">30+ models</span> supported and growing
+            <span className="text-purple-400 font-semibold">Transformer & Non-Transformer</span> models supported
           </p>
         </div>
       </div>

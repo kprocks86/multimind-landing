@@ -7,47 +7,51 @@ const roadmapItems = [
   {
     phase: "Phase 1",
     title: "Core SDK",
-    description: "Unified API for all major LLMs with fine-tuning capabilities",
+    description: "Unified API for all Transformer & Non-Transformer Models  with fine-tuning capabilities",
     status: "completed",
     items: [
       "Model abstraction layer",
-      "Fine-Tuning",
-      "Agent capabilities",
-      "Local model support",
-      "Cloud API integrations",
-      "CLI Interface",
-      "Router & Fallback",
-      "RAG & Orchestration",
+      "Fine-tuning engine (LoRA, QLoRA, Adapters, MAML)",
+      "AI agent orchestration (multi-model routing, fallback logic)",
+      "Local + cloud model support (OpenAI, RWKV, Ollama, Mamba)",
+      "Built-in integrations with Hugging Face, Ollama, OpenAI",
+      "CLI and YAML interface",
+      "Multi-model router & fallback logic",
+      "RAG-ready (vector + graph retrieval orchestration)",
     ],
   },
   {
     phase: "Phase 2",
-    title: "Visual Agent Builder",
-    description: "No-code interface for creating and deploying AI agents",
+    title: "MultiMindLab – No-Code AI Builder",
+    description: "Build & Deploy AI Models, Agents, and Workflows",
     status: "in-progress",
     items: [
-      "Drag-and-drop workflow builder",
-      "Visual prompt engineering",
-      "Agent templates library",
-      "Performance monitoring",
-      "One-click deployment",
-      "One-Click Deployment",
-      "YAML ↔ UI Sync",
+      "Fine-tune Transformer & Non-Transformer models (RWKV, Mamba)",
+      "Visual drag-and-drop agent builder",
+      "Reusable AI templates for domains (Healthcare, Legal, Finance, etc.)",
+      "Visual prompt + logic flow editor",
+      "One-click deployment to Hugging Face, GCP, Azure, AWS, Ollama, Edge",
+      "Model conversion to ONNX, GGUF, TFLite, Safetensors",
+      "MCP (Multi-Cloud Publish) for hybrid/on-prem rollout",
+      "UI ↔ YAML ↔ CLI sync for technical and non-technical users",
+      "Agent performance monitoring and live test runs",
     ],
   },
   {
     phase: "Phase 3",
-    title: "Enterprise Features",
-    description: "Scale, secure, and govern your AI platform",
+    title: "Enterprise & Governance Layer",
+    description: "Scale, Secure & Govern Your AI Infrastructure",
     status: "planned",
     items: [
-      "Multi-Tenant Architecture",
-      "Advanced Security Controls",
-      "Custom Model Hosting",
-      "Audit Logging & Compliance",
-      "High-Availability Clustering",
-      "Data Encryption & Tokenization",
-      "Service-Level Agreements",
+      "Multi-tenant, role-based user & org management",
+      "Advanced security (OAuth2, RBAC, API tokens)",
+      "Custom model hosting with version control",
+      "Audit logging, GDPR/HIPAA/SOC2 support",
+      "High-availability clustering + multi-node deployment",
+      "End-to-end encryption, tokenization & secret vaulting",
+      "SLA-enforced hosting plans for regulated industries",
+      "Cost tracking, usage metrics, billing hooks",
+      "Plugin architecture to integrate tools like ServiceNow, Salesforce, CRMs",
     ],
   },
 ]
@@ -75,7 +79,7 @@ export default function RoadmapSection() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mx-auto">
           {roadmapItems.map((item, index) => (
             <div
               key={index}

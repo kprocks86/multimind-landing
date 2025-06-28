@@ -70,7 +70,6 @@ export default function CommunitySection() {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a href="https://github.com/multimindlab/multimind-sdk" target="_blank" rel="noopener noreferrer">
-
             <Button
               className="bg-white text-gray-900 hover:bg-gray-200 flex items-center gap-2"
               size="lg"
@@ -86,6 +85,14 @@ export default function CommunitySection() {
               >
                 <MessageSquare size={20} />
                 Join Discord
+              </Button>
+            </a>
+            <a href="https://opencollective.com/multimind-sdk" target="_blank" rel="noopener noreferrer">
+              <Button
+                className="bg-white text-gray-900 hover:bg-gray-200 flex items-center gap-2"
+                size="lg"
+              >
+                Support Us
               </Button>
             </a>
             {/* <Button variant="outline" className="border-gray-700 hover:bg-gray-800" size="lg">
