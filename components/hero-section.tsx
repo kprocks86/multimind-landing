@@ -147,32 +147,33 @@ export default function HeroSection() {
               </p>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="https://github.com/multimindlab/multimind-sdk" target="_blank" rel="noopener noreferrer">
+            <div className="flex flex-col sm:flex-row gap-4 w-full">
+              <Link href="https://github.com/multimindlab/multimind-sdk" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
                 <Button
-                  className="bg-white text-gray-900 hover:bg-gray-200 flex items-center gap-2 text-base py-6 px-6"
+                  className="w-full bg-white text-gray-900 hover:bg-gray-200 flex items-center gap-2 text-base py-6 px-6"
                   size="lg"
                 >
                   <Star size={20} />
                   Star on GitHub
                 </Button>
               </Link>
-              <Button
-                className="bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 flex items-center gap-2 text-base py-6 px-6"
-                size="lg"
-                onClick={() => setContactModalOpen(true)}
-              >
-                Join Us
-              </Button>
-              <Link href="https://opencollective.com/multimind-sdk" target="_blank" rel="noopener noreferrer">
+              <div className="w-full sm:w-auto">
                 <Button
-                  className="bg-white text-gray-900 hover:bg-gray-200 flex items-center gap-2 text-base py-6 px-6"
+                  className="w-full bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 flex items-center gap-2 text-base py-6 px-6"
+                  size="lg"
+                  onClick={() => setContactModalOpen(true)}
+                >
+                  Join Us
+                </Button>
+              </div>
+              <Link href="https://opencollective.com/multimind-sdk" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+                <Button
+                  className="w-full bg-white text-gray-900 hover:bg-gray-200 flex items-center gap-2 text-base py-6 px-6"
                   size="lg"
                 >
                   Support Us
                 </Button>
               </Link>
-
             </div>
 
             {/* <div className="flex items-center gap-2 text-gray-500 text-sm">

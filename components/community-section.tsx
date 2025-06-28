@@ -69,32 +69,38 @@ export default function CommunitySection() {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="https://github.com/multimindlab/multimind-sdk" target="_blank" rel="noopener noreferrer">
-            <Button
-              className="bg-white text-gray-900 hover:bg-gray-200 flex items-center gap-2"
-              size="lg"
-            >
-              <Github size={20} />
-              GitHub
-            </Button>
-            </a>
-            <a href="https://discord.gg/K64U65je7h" target="_blank" rel="noopener noreferrer">
-              <Button
-                className="bg-[#5865F2] hover:bg-[#4752c4] flex items-center gap-2"
-                size="lg"
-              >
-                <MessageSquare size={20} />
-                Join Discord
-              </Button>
-            </a>
-            <a href="https://opencollective.com/multimind-sdk" target="_blank" rel="noopener noreferrer">
-              <Button
-                className="bg-white text-gray-900 hover:bg-gray-200 flex items-center gap-2"
-                size="lg"
-              >
-                Support Us
-              </Button>
-            </a>
+            <div className="w-full sm:w-auto">
+              <a href="https://github.com/multimindlab/multimind-sdk" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+                <Button
+                  className="w-full bg-white text-gray-900 hover:bg-gray-200 flex items-center gap-2"
+                  size="lg"
+                >
+                  <Github size={20} />
+                  GitHub
+                </Button>
+              </a>
+            </div>
+            <div className="w-full sm:w-auto">
+              <a href="https://discord.gg/K64U65je7h" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+                <Button
+                  className="w-full bg-[#5865F2] hover:bg-[#4752c4] flex items-center gap-2"
+                  size="lg"
+                >
+                  <MessageSquare size={20} />
+                  Join Discord
+                </Button>
+              </a>
+            </div>
+            <div className="w-full sm:w-auto">
+              <a href="https://opencollective.com/multimind-sdk" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+                <Button
+                  className="w-full bg-white text-gray-900 hover:bg-gray-200 flex items-center gap-2"
+                  size="lg"
+                >
+                  Support Us
+                </Button>
+              </a>
+            </div>
             {/* <Button variant="outline" className="border-gray-700 hover:bg-gray-800" size="lg">
               Documentation
             </Button> */}

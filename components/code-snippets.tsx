@@ -183,7 +183,7 @@ export default function CodeSnippets() {
 
         <div className="max-w-5xl mx-auto">
           <Tabs defaultValue="rag" value={activeTab} onValueChange={setActiveTab}>
-            <TabsList className="grid grid-cols-2 md:grid-cols-4 mb-8">
+            <TabsList className="grid grid-cols-2 md:grid-cols-4 mb-8 h-auto min-h-0">
               {codeSnippets.map((snippet) => (
                 <TabsTrigger
                   key={snippet.id}
