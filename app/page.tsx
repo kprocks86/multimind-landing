@@ -12,6 +12,7 @@ import VisionSection from "@/components/vision-section"
 import RoadmapSection from "@/components/roadmap-section"
 import CommunitySection from "@/components/community-section"
 import Footer from "@/components/footer"
+import { FloatingStarWidget } from "@/components/floating-star-widget"
 
 export default function Home() {
   return (
@@ -32,6 +33,7 @@ export default function Home() {
         <CommunitySection />
       </main>
       <Footer />
+      <FloatingStarWidget />
     </div>
   )
 }
