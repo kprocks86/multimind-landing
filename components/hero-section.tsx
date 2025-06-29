@@ -191,7 +191,7 @@ export default function HeroSection() {
             </div> */}
           </div>
 
-          <div className="lg:w-1/2 md:w-2/3 sm:w-full xs:w-full relative">
+          <div className="w-full lg:w-1/2 md:w-2/3 relative">
             <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-cyan-500/20 rounded-lg blur-3xl opacity-20"></div>
             <div className="relative bg-gray-900 border border-gray-800 rounded-lg p-6 shadow-xl">
               <div className="flex items-center gap-2 mb-4 ">
@@ -202,8 +202,8 @@ export default function HeroSection() {
                   {codeExamples[currentExampleIndex].title.toLowerCase().replace(/\s+/g, "_")}_demo.py
                 </div>
               </div>
-              <div className="bg-gray-950 rounded-md p-4 font-mono text-sm overflow-hidden min-h-[350px]">
-                <pre className="text-gray-300 whitespace-pre-wrap">
+              <div className="bg-gray-950 rounded-md p-4 font-mono text-sm overflow-hidden min-h-[420px] md:min-h-[350px] h-[220px] md:h-auto w-full">
+                <pre className="text-gray-300 whitespace-pre-wrap h-full">
                   {typingText}
                   {isTyping && <span className="inline-block w-2 h-4 bg-white ml-1 animate-pulse"></span>}
                 </pre>
