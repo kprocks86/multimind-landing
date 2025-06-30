@@ -79,7 +79,7 @@ export default function CommunitySection() {
             </div>
             <div className="w-full sm:w-auto">
               <a href="https://github.com/multimindlab/multimind-sdk-js" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
-                <Button className="w-full bg-yellow-600 hover:bg-yellow-700 flex items-center gap-2" size="lg">
+                <Button className="w-full bg-cyan-600 hover:bg-cyan-700 flex items-center gap-2" size="lg">
                   <Github size={20} />
                   JS/TS SDK
                 </Button>

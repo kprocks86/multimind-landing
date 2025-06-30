@@ -37,10 +37,16 @@ export default function Navbar() {
           <Link href="/blogs" className="text-gray-300 hover:text-white transition-colors">
             Blog
           </Link>
-          <Link href="https://github.com/multimindlab" target="_blank" rel="noopener noreferrer">
+          <Link href="https://github.com/multimindlab/multimind-sdk" target="_blank" rel="noopener noreferrer">
             <Button variant="outline" className="flex items-center gap-2 text-gray-900 border-gray-700">
               <Github size={18} />
-              <span>GitHub</span>
+              <span>Python SDK</span>
+            </Button>
+          </Link>
+          <Link href="https://github.com/multimindlab/multimind-sdk-js" target="_blank" rel="noopener noreferrer">
+            <Button variant="outline" className="flex items-center gap-2 text-gray-900 border-gray-700">
+              <Github size={18} />
+              <span>JS/TS SDK</span>
             </Button>
           </Link>
         </div>
@@ -92,16 +98,21 @@ export default function Navbar() {
             >
               Blog
             </Link>
-            <div className="flex flex-col space-y-3 pt-2">
-            <Link href="https://github.com/multimindlab" target="_blank" rel="noopener noreferrer">
-            <Button variant="outline" className="flex items-center gap-2 text-gray-900 border-gray-700">
-              <Github size={18} />
-              <span>GitHub</span>
-            </Button>
-          </Link>
-              {/* <Button className="w-full bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700">
-                Get Started
-              </Button> */}
+            <div className="flex flex-col space-y-3 pt-2 w-full">
+              <Link href="https://github.com/multimindlab/multimind-sdk" target="_blank" rel="noopener noreferrer" className="w-full">
+                <Button variant="outline" className="w-full flex items-center gap-2 text-gray-900 border-gray-700">
+                  <Github size={18} />
+                  <span>Python SDK</span>
+                </Button>
+              </Link>
+            </div>
+            <div className="flex flex-col space-y-3 pt-2 w-full">
+              <Link href="https://github.com/multimindlab/multimind-sdk-js" target="_blank" rel="noopener noreferrer" className="w-full">
+                <Button variant="outline" className="w-full flex items-center gap-2 text-gray-900 border-gray-700">
+                  <Github size={18} />
+                  <span>JS/TS SDK</span>
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
