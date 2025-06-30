@@ -71,12 +71,17 @@ export default function CommunitySection() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <div className="w-full sm:w-auto">
               <a href="https://github.com/multimindlab/multimind-sdk" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
-                <Button
-                  className="w-full bg-white text-gray-900 hover:bg-gray-200 flex items-center gap-2"
-                  size="lg"
-                >
+                <Button className="w-full bg-white text-gray-900 hover:bg-gray-200 flex items-center gap-2" size="lg">
                   <Github size={20} />
-                  GitHub
+                  Python SDK
+                </Button>
+              </a>
+            </div>
+            <div className="w-full sm:w-auto">
+              <a href="https://github.com/multimindlab/multimind-sdk-js" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+                <Button className="w-full bg-yellow-600 hover:bg-yellow-700 flex items-center gap-2" size="lg">
+                  <Github size={20} />
+                  JS/TS SDK
                 </Button>
               </a>
             </div>

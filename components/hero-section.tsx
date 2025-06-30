@@ -148,7 +148,7 @@ export default function HeroSection() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 w-full">
-              <Link href="https://github.com/multimindlab/multimind-sdk" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+              <Link href="https://github.com/multimindlab" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
                 <Button
                   className="w-full bg-white text-gray-900 hover:bg-gray-200 flex items-center gap-2 text-base py-6 px-6"
                   size="lg"
