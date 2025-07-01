@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Github, Menu, X, Star } from "lucide-react"
 
@@ -13,7 +14,7 @@ export default function Navbar() {
       <div className="container mx-auto px-4 py-3 flex items-center justify-between">
         <div className="flex items-center">
           <Link href="/" className="text-xl font-bold text-white flex items-center">
-            <img src="/logos/brand_logo.png" alt="MultiMind Logo" className="w-10 h-10 mr-2" />
+            <Image src="/logos/brand_logo.png" alt="MultiMind Logo" className="w-10 h-10 mr-2" width={40} height={40} />
             <span className="bg-gradient-to-r from-purple-500 to-cyan-500 text-transparent bg-clip-text">
               MultiMind
             </span>

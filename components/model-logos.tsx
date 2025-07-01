@@ -42,7 +42,13 @@ export default function ModelLogos() {
               key={index}
               className="grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300 flex flex-col items-center"
             >
-              <img src={logo.logo || "/placeholder.svg"} alt={`${logo.name} logo`} className={logo.className} />
+              <img
+                src={logo.logo || "/placeholder.svg"}
+                alt={`${logo.name} logo`}
+                className={logo.className}
+                style={{ height: '40px', width: 'auto' }}
+                loading="lazy"
+              />
               <span className="text-gray-400 text-sm mt-2">{logo.name}</span>
             </div>
           ))}
