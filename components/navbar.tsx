@@ -46,7 +46,7 @@ export default function Navbar() {
           <Link href="https://github.com/multimindlab/multimind-sdk-js" target="_blank" rel="noopener noreferrer">
             <Button variant="outline" className="flex items-center gap-2 text-gray-900 border-gray-700">
               <Github size={18} />
-              <span>JS/TS SDK</span>
+              <span>JS SDK</span>
             </Button>
           </Link>
         </div>
@@ -110,7 +110,7 @@ export default function Navbar() {
               <Link href="https://github.com/multimindlab/multimind-sdk-js" target="_blank" rel="noopener noreferrer" className="w-full">
                 <Button variant="outline" className="w-full flex items-center gap-2 text-gray-900 border-gray-700">
                   <Github size={18} />
-                  <span>JS/TS SDK</span>
+                  <span>JS SDK</span>
                 </Button>
               </Link>
             </div>
