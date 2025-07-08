@@ -14,7 +14,7 @@ export default function Footer() {
               </span>
             </Link>
             <p className="mt-2 text-gray-400">Built by Ai2Innovate</p>
-            <p className="mt-4 text-gray-400">MultiMind SDK. Your Toolkit for Model-Agnostic AI</p>
+            <p className="mt-4 text-gray-400">MultiMind SDK. Built in Europe.</p>
             <div className="flex items-center gap-4 mt-6">
               <Link
                 href="https://github.com/multimindlab"

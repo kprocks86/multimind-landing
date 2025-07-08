@@ -133,13 +133,13 @@ export default function HeroSection() {
           <div className="lg:w-1/2 space-y-8">
             <div>
               <div className="inline-block px-3 py-1 mb-6 text-sm font-medium rounded-full bg-purple-900/30 text-purple-400 border border-purple-800/50">
-              Deep Tech • Model-Agnostic Toolkit
+              Deep Tech • Model-Agnostic Toolkit • Europe-Made
               </div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
                 MultiMind SDK. <br />
-                Your Toolkit for <br />
+
                 <span className="bg-gradient-to-r from-purple-500 to-cyan-500 text-transparent bg-clip-text">
-                Model-Agnostic AI
+                One Toolkit to <br /> Power Any AI
                 </span>
               </h1>
               <p className="mt-6 text-xl text-gray-400 max-w-lg">
