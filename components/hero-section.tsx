@@ -133,7 +133,7 @@ export default function HeroSection() {
           <div className="lg:w-1/2 space-y-8">
             <div>
               <div className="inline-block px-3 py-1 mb-6 text-sm font-medium rounded-full bg-purple-900/30 text-purple-400 border border-purple-800/50">
-              Deep Tech • Model-Agnostic Toolkit • Europe-Made
+              Deep Tech • Model-Agnostic Toolkit • Framework
               </div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
                 MultiMind SDK. <br />
@@ -148,7 +148,7 @@ export default function HeroSection() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 w-full">
-              <Link href="https://github.com/multimindlab" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+              <Link href="https://github.com/multimindlab/multimind-sdk" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
                 <Button
                   className="w-full bg-white text-gray-900 hover:bg-gray-200 flex items-center gap-2 text-base py-6 px-6"
                   size="lg"
@@ -171,7 +171,7 @@ export default function HeroSection() {
                   className="w-full bg-white text-gray-900 hover:bg-gray-200 flex items-center gap-2 text-base py-6 px-6"
                   size="lg"
                 >
-                  Support Us
+                  Donate
                 </Button>
               </Link>
             </div>

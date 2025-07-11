@@ -73,18 +73,18 @@ export default function CommunitySection() {
               <a href="https://github.com/multimindlab/multimind-sdk" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
                 <Button className="w-full bg-white text-gray-900 hover:bg-gray-200 flex items-center gap-2" size="lg">
                   <Github size={20} />
-                  Python SDK
+                  SDK
                 </Button>
               </a>
             </div>
-            <div className="w-full sm:w-auto">
+            {/* <div className="w-full sm:w-auto">
               <a href="https://github.com/multimindlab/multimind-sdk-js" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
                 <Button className="w-full bg-cyan-600 hover:bg-cyan-700 flex items-center gap-2" size="lg">
                   <Github size={20} />
                   JS SDK
                 </Button>
               </a>
-            </div>
+            </div> */}
             <div className="w-full sm:w-auto">
               <a href="https://discord.gg/K64U65je7h" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
                 <Button
@@ -102,7 +102,7 @@ export default function CommunitySection() {
                   className="w-full bg-white text-gray-900 hover:bg-gray-200 flex items-center gap-2"
                   size="lg"
                 >
-                  Support Us
+                  Donate
                 </Button>
               </a>
             </div>

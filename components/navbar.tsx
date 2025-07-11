@@ -41,15 +41,15 @@ export default function Navbar() {
           <Link href="https://github.com/multimindlab/multimind-sdk" target="_blank" rel="noopener noreferrer">
             <Button variant="outline" className="flex items-center gap-2 text-gray-900 border-gray-700">
               <Github size={18} />
-              <span>Python SDK</span>
+              <span>SDK</span>
             </Button>
           </Link>
-          <Link href="https://github.com/multimindlab/multimind-sdk-js" target="_blank" rel="noopener noreferrer">
+          {/* <Link href="https://github.com/multimindlab/multimind-sdk-js" target="_blank" rel="noopener noreferrer">
             <Button variant="outline" className="flex items-center gap-2 text-gray-900 border-gray-700">
               <Github size={18} />
               <span>JS SDK</span>
             </Button>
-          </Link>
+          </Link> */}
         </div>
 
         {/* Mobile Menu Button */}
@@ -103,18 +103,18 @@ export default function Navbar() {
               <Link href="https://github.com/multimindlab/multimind-sdk" target="_blank" rel="noopener noreferrer" className="w-full">
                 <Button variant="outline" className="w-full flex items-center gap-2 text-gray-900 border-gray-700">
                   <Github size={18} />
-                  <span>Python SDK</span>
+                  <span>SDK</span>
                 </Button>
               </Link>
             </div>
-            <div className="flex flex-col space-y-3 pt-2 w-full">
+            {/* <div className="flex flex-col space-y-3 pt-2 w-full">
               <Link href="https://github.com/multimindlab/multimind-sdk-js" target="_blank" rel="noopener noreferrer" className="w-full">
                 <Button variant="outline" className="w-full flex items-center gap-2 text-gray-900 border-gray-700">
                   <Github size={18} />
                   <span>JS SDK</span>
                 </Button>
               </Link>
-            </div>
+            </div> */}
           </div>
         </div>
       )}
